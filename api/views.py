@@ -64,6 +64,7 @@ class Estado_reservaDelete(generics.UpdateAPIView): #DELETE
     serializer_class = Estado_reservaSerializer
     lookup_field = 'id'
     
+    
 #Creacion de views de reservar (metodos)
 class ReservarListCreate(generics.ListCreateAPIView):  #POST
     queryset = Reservar.objects.all()
@@ -81,4 +82,24 @@ class ReservarUpdate(generics.UpdateAPIView): #UPDATE
 class Reservar(generics.UpdateAPIView): #DELETE
     queryset = Reservar.objects.all()
     serializer_class = ReservarSerializer
+    lookup_field = 'id'
+    
+    
+#creacion de views de cancelar reserva (metodos)
+class Cancelar_reservasListCreate(generics.ListCreateAPIView):  #POST
+    queryset = Cancelar_reservas.objects.all()
+    serializer_class = Cancelar_reservasSerializer
+    
+class Cancelar_reservasDetail(generics.RetrieveUpdateDestroyAPIView): #GET
+    queryset = Cancelar_reservas.objects.all()
+    serializer_class = Cancelar_reservasSerializer
+    
+class Cancelar_reservasUpdate(generics.UpdateAPIView): #UPDATE
+    queryset = Cancelar_reservas.objects.all()
+    serializer_class = Cancelar_reservasSerializer
+    lookup_field = 'id'
+    
+class Cancelar_reservas(generics.UpdateAPIView): #DELETE
+    queryset = Cancelar_reservas.objects.all()
+    serializer_class = Cancelar_reservasSerializer
     lookup_field = 'id'
