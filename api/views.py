@@ -44,3 +44,22 @@ class Zonas_disponoblesDelete(generics.UpdateAPIView): #DELETE
     serializer_class = zonas_disponiblesSerializer
     lookup_field = 'id'
     
+    
+    # Creacion de views de Estado reserva (metodos).
+class Estado_reservaListCreate(generics.ListCreateAPIView):  #POST
+    queryset = Estado_reserva.objects.all()
+    serializer_class = Estado_reservaSerializer
+    
+class Estado_reservaDetail(generics.RetrieveUpdateDestroyAPIView): #GET
+    queryset = Estado_reserva.objects.all()
+    serializer_class = Estado_reservaSerializer
+    
+class Estado_reservaUpdate(generics.UpdateAPIView): #UPDATE
+    queryset = Estado_reserva.objects.all()
+    serializer_class = Estado_reservaSerializer
+    lookup_field = 'id'
+    
+class Estado_reservaDelete(generics.UpdateAPIView): #DELETE
+    queryset = Estado_reserva.objects.all()
+    serializer_class = Estado_reservaSerializer
+    lookup_field = 'id'
