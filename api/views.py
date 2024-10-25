@@ -24,4 +24,23 @@ class ClientesDelete(generics.UpdateAPIView): #DELETE
     serializer_class = clientesSerializer
     lookup_field = 'id'
     
-    # Creacion de views de Clientes(metodos).
+    
+# Creacion de views de Zonas disponibles (metodos).
+class Zonas_disponiblesListCreate(generics.ListCreateAPIView):  #POST
+    queryset = Zonas_disponibles.objects.all()
+    serializer_class = zonas_disponiblesSerializer
+    
+class Zonas_disponiblesDetail(generics.RetrieveUpdateDestroyAPIView): #GET
+    queryset = Zonas_disponibles.objects.all()
+    serializer_class = zonas_disponiblesSerializer
+    
+class Zonas_disponoblesUpdate(generics.UpdateAPIView): #UPDATE
+    queryset = Zonas_disponibles.objects.all()
+    serializer_class = zonas_disponiblesSerializer
+    lookup_field = 'id'
+    
+class Zonas_disponoblesDelete(generics.UpdateAPIView): #DELETE
+    queryset = Zonas_disponibles.objects.all()
+    serializer_class = zonas_disponiblesSerializer
+    lookup_field = 'id'
+    
