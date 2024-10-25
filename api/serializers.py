@@ -20,7 +20,7 @@ class Estado_reservaSerializer(serializers.ModelSerializer):
         model = Estado_reserva
         fiels = '__all__'     
         
-class ReservaSerializer(serializers.ModelSerializer):
+class ReservarSerializer(serializers.ModelSerializer):
     class meta:
         model= Reservar        
         fiels = '__all__'
